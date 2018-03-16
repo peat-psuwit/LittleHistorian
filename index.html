@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Little Historian</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            /*body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }*/
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.js"><\/script>');</script>-->
+        <script src="js/vendor/jquery-1.11.0.js"></script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/kinetic-v5.1.0.js"></script>
+        <script src="js/vendor/imagesloaded.pkgd.js"></script>
+        <script src="js/vendor/howler.js"></script>
+
+        <script src="js/navigator.js"></script>
+        <script src="js/gameManager.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner page" id="firstPage">
+                <div class="container">
+                    <div class="inner">
+                        <img src="img/logo.png" class="logo" alt="The Little Historian" />
+                    </div>
+                    <div class="inner">
+                        <div class="btn btn-primary btn-lg" id="firstPagePlay">Play</div>
+                    </div>
+                </div>
+                <script src="js/page-js/firstPage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="characterChooserPage">
+                <div class="container">
+                    <h1>โปรดเลือกตัวละคร</h1>
+                    <div class="row inner row-centered" id="characterChooserPageCharacterPanel">
+                        <!-- Dynamically generated -->
+                    </div>
+                    <div class="inner">
+                        <div class="btn btn-default" id="characterChooserPageBack">Back</div>
+                        <div class="btn btn-primary disabled" id="characterChooserPageCont">Continue</div>
+                    </div>
+                </div>
+                <script src="js/page-js/characterChooserPage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="mapPage">
+                <div id="mapPageCanvas"></div>
+                <script src="js/page-js/mapPage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="quizPage">
+                <div class="container">
+                    <h2 id="quizPageQuestionText"></h2>
+                    <div style="text-align: center">
+                        <img id="quizPageImage" src="" alt="" />
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="row" id="quizPageChoicesContainer">
+                                <!-- Use javascript to fill. -->
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-sm-pull-8">
+                            <img id="quizPageCharacterImage" />
+                        </div>
+                    </div>
+                </div>
+                <script src="js/page-js/quizPage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="knowledgePage">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-4 col-sm-6 col-sm-offset-6">
+                            <h1 id="knowledgePageHeader">เกร็ดความรู้</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6" style="text-align: center;">
+                            <img id="knowledgePageImage" />
+                        </div>
+                        <div class="col-md-8 col-sm-6">
+                            <p id="knowledgePageText"></p>
+                        </div>
+                    </div>
+                    <div class="btn btn-primary btn-lg" id="knowledgePageCont">ไปต่อ</div>
+                </div>
+                <script src="js/page-js/knowledgePage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="tresureFindingPage">
+                <div id="tresureFindingPageGreetingModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="text-align: center;">ยินดีด้วย!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>คุณได้มาถึงชายฝั่งแห่งนี้แล้ว แน่นอนว่าคุณคงคาดหวังที่จะพบหีบสมบัติโดยง่าย แต่แผนที่สมบัติกลับไม่บอกว่าหีบสมบัติอยู่ตรงไหนกันแน่ ลองคลิ๊กลงไปสักแห่งดูสิ แล้วคุณจะได้พบกับหีบสมบัติ! (ปล. คลิ๊กดีๆ มีคะแนนพิเศษให้นะ)</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">ไปกันเลย!</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <div id="tresureFindingPageResultModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="text-align: center;">พบหีบสมบัติแล้ว!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="tresureFindingPageResultModalImgWrapper">
+                                    <img src="img/treasureFinding/tresure.jpg" alt="หีบสมบัติ" />
+                                </div>
+                                <p>คุณได้คะแนนพิเศษไป <span id="tresureFindingPageResultScore"></span> คะแนน</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="tresureFindingPageCont">ดูคะแนนรวม</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <div id="tresureFindingPageCanvas"></div>
+                <script src="js/page-js/tresureFindingPage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="scorePage">
+                <div class="container">
+                    <h3>คุณได้</h3>
+                    <h1 id="scorePageScoreNumber"></h1>
+                    <h3>คะแนน</h3>
+                    <div class="btn btn-default" id="scorePageCont">คณะผู้จัดทำ</div>
+                </div>
+                <script src="js/page-js/scorePage.js"></script>
+            </div>
+            <div class="site-wrapper-inner page" id="creditPage">
+                <div class="container">
+                    <h1>คณะผู้จัดทำ</h1>
+                    <p>นาย รัชนันท์ ศรีรัตนเมธ</p>
+                    <p>นางสาว คชัชชา ก่อเกิยรติพิทักษ์</p>
+                    <p>นางสาว กุลรัตน์ รักษ์พวษ์</p>
+                    <p>นางสาว พันทิรา พานรัตนวลี</p>
+                    <div class="btn btn-default" id="creditPageReplay">เล่นอีกครั้ง</div>
+                </div>
+                <script src="js/page-js/creditPage.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

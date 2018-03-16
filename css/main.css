@@ -1,0 +1,150 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html,
+body {
+  height: 100%;
+  /*background-color: #663300;*/
+  background-image: url(../img/background.jpg);
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+body {
+    text-align: center;
+}
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+    margin-bottom: 10px;
+    
+}
+
+.page {
+    opacity: 0; /*Initailly. It'll be changed to 1 by jQuery.*/
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.75);
+}
+
+.lower-right {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+img.logo {
+    width: 100%;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    //text-align:left;
+    /* inline-block space fix */
+    /* margin-right:-4px; */
+}
+
+#characterChooserPageCharacterPanel {
+    
+}
+
+#characterChooserPageCharacterPanel > div {
+    /* display: table-cell; */
+    height: 100%;
+}
+
+#characterChooserPageCharacterPanel > div.selected {
+    background-color: rgba(51,255,51,0.5);
+}
+
+#characterChooserPageCharacterPanel > div > img {
+    /* display: table-row; */
+    height: 150px;
+}
+
+#characterChooserPageCharacterPanel > div > div {
+    /* display: table-row; */
+}
+
+#quizPageCharacterImage {
+    width: 120px;
+}
+
+.quizPageChoice {
+    margin-bottom: 10px;
+    //margin-left: 15px;
+}
+
+.quizPageChoice > .btn {
+    white-space: normal;
+}
+
+#quizPageImage {
+    margin-bottom: 10px;
+    /* width: 75%; */
+}
+
+#quizPageQuestionText {
+    color: #ffffff;
+    background-color: #e08200;
+    padding: 10px;
+    
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+#knowledgePageHeader {
+    background-color: #ffcc00;
+    padding: 10px;
+    
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+#knowledgePageImage {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+#knowledgePageText {
+    text-align: left;
+    font-size: 1.2em;
+    background-color: #ccff33;
+    padding: 10px;
+    
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+}
+
+.site-wrapper-inner .modal {
+    text-align: left;
+}
+
+#tresureFindingPageResultModalImgWrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tresureFindingPageResultModalImgWrapper > img {
+    width: 80%;
+}
